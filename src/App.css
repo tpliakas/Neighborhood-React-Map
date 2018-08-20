@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+}
+
+#map {
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    right: 0;
+    left: 20%;
+}
+
+#search-input {
+    height: 3.3em;
+    border: none;
+    width: 94%;
+    padding: 0 3%;
+    background:#ddd;
+    font-size: 0.8em;
+}
+
+#menu {
+    position: fixed;
+    z-index: 100;
+    width: calc(20% - 2em);
+    height: 100%;
+    background: #f4f4f4;
+    padding: 1em;
+    bottom: 0;
+    top: 0;
+}
+
+#menu .list-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu .list-menu ul li {
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    display: block;
+    border: 0;
+    background: linear-gradient(to right, #3a3838 50%,#f4f4f4 50%) no-repeat scroll right bottom / 210% 100% #f4f4f4;   
+    color: #333;
+    width: 80%;
+    padding: 1em 3%;
+    margin: .5rem auto;
+    border-bottom: 1px solid #dedede;
+}
+
+#menu .list-menu ul li:hover {
+    background: linear-gradient(to right, #3a3838 50%,#f4f4f4 50%) no-repeat scroll left bottom / 210% 100% #f4f4f4;
+    color: #fff;
+    transition: all ease 1.5s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    #menu {
+        height: 20%;
+        width: calc(100% - 2em);
+        left: 0;
+        right: 0;
+    }
+    .list-menu {
+        margin-top: 0.5em;
+        overflow-y: scroll;
+        height: calc(90% - 0.5em);
+    }
+    #menu .list-menu ul li {
+        padding: 0.5em;
+    }
+    #container {
+        position: relative;
+    }
+    #map {
+        height: calc(80% - 1.4% - 1em);
+        position: relative;
+        left: 0;
+        top: calc(20% + 1.4% + 1em);
+        width: 100%;
+    }
+}
+
+.infowindow {
+    font-weight: 700;
+    font-size: 1.1em;
+    text-align: center;
+    width: fit-content;
+}
